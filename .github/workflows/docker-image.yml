@@ -22,7 +22,11 @@ jobs:
           username: ${{ vars.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-          
+    - name: Tag Docker
+      run:
+        docker tag local-image:api-encriptacion new-repo:api-encriptacion
+        
+
     - name: Push To Docker Hub
       run: 
-        docker push docker-api-encriptacion:latest
+        docker push new-repo:api-encriptacion
