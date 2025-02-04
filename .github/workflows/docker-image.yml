@@ -24,9 +24,9 @@ jobs:
 
     - name: Tag Docker
       run:
-        docker tag local-image:api-encriptacion new-repo:api-encriptacion
+        docker tag docker-api-encriptacion:latest docker-api-encriptacion:latest
         
 
     - name: Push To Docker Hub
       run: 
-        docker push new-repo:api-encriptacion
+        docker push docker-api-encriptacion:latest
