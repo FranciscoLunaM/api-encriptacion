@@ -15,8 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: creating image from docker
-      run: |
-        docker build -t . ${{vars.DOCKER_HUB_USERNAME}}/apiencriptacion:latest
+      run: docker build . -t ${{vars.DOCKER_HUB_USERNAME}}/apiencriptacion:latest
 
 
     - name: logging and Push To Docker Hub
