@@ -17,5 +17,5 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Push To Docker Hub
       run: 
-        docker login -u franciscoeluna -p {{secrets.DOCKER_HUB_TOKEN}}
+        docker login -u franciscoeluna -p ${{secrets.DOCKER_HUB_TOKEN}}
         docker push FranciscoLunaM/apiEncriptacion:latest
