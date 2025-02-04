@@ -21,6 +21,7 @@ jobs:
       with:
           username: ${{ vars.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
           
     - name: Push To Docker Hub
       run: 
