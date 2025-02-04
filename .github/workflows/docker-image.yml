@@ -24,4 +24,4 @@ jobs:
           
     - name: Push To Docker Hub
       run: 
-        docker push FranciscoLunaM/apiEncriptacion:latest
+        docker push FranciscoLunaM/api-encriptacion:latest
